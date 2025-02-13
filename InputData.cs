@@ -11,10 +11,12 @@ namespace HSE_Lab_9
             int value;
             return (Int32.TryParse(s, out value) && (value > 0 || !mustBePositive));
         }
+
         public static bool IntIsInRange(int n, int min, int high)
         {
             return n <= high && n >= min;
         }
+
         public static int GetInteger(string msg, bool mustBePositive)
         {
             string console = GetString(msg);
@@ -22,6 +24,7 @@ namespace HSE_Lab_9
                 console = GetString($"Enter a valid integer");
             return Int32.Parse(console);
         }
+
         public static int GetIntInRange(string msg, int min, int high)
         {
             string console = GetString(msg);
@@ -36,6 +39,7 @@ namespace HSE_Lab_9
             double value;
             return (Double.TryParse(s, out value) && (value > 0 || !mustBePositive));
         }
+
         public static double GetDouble(string msg, bool mustBePositive)
         {
             string console = GetString(msg);
@@ -43,10 +47,12 @@ namespace HSE_Lab_9
                 console = GetString($"Enter a valid real number");
             return Double.Parse(console);
         }
+
         public static bool DoubleIsInRange(double n, double min, double high)
         {
             return n <= high && n >= min;
         }
+
         public static double GetDoubleInRange(string msg, double min, double high)
         {
             string console = GetString(msg);

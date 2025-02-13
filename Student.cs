@@ -114,6 +114,7 @@
                     return $"GPA {s1.Name} равен GPA {s2.Name}";
         }
 
+            //унарные операции
             public static Student operator ~(Student s)
             {
                 string newName = "";
@@ -135,6 +136,7 @@
             return new(s.Name, newAge, s.GPA);
         }
 
+            //преобразования
             public static implicit operator bool (Student s)
             {
             return s.GPA < 6;
@@ -148,6 +150,7 @@
             return year;
             }
 
+            //бинарные операции
             public static Student operator %(Student s1, string newName)
         {
             return new(newName, s1.Age, s1.GPA);
