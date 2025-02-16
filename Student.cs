@@ -6,7 +6,7 @@
             string name; 
             int age;   
             double gpa;  
-            static int total_students;
+            static int totalStudents;
             private Student student;
             
             //свойства
@@ -50,7 +50,7 @@
 
             public static int Total_students
             {
-                get => total_students;
+                get => totalStudents;
                 //set отсутствует - устанавливать значение нельзя, только получать
             }
 
@@ -60,7 +60,7 @@
                 Name = "John Doe";
                 Age = 18;  
                 GPA = 5;
-                total_students++; 
+                totalStudents++; 
             }
 
             public Student(string n, int a, double g)
@@ -68,7 +68,7 @@
                 Name = n;
                 Age = a;
                 GPA = g;
-                total_students++;
+                totalStudents++;
             }
 
             public Student(Student student)
@@ -76,7 +76,7 @@
             this.Name = student.Name;
             this.Age = student.Age;
             this.GPA = student.GPA;
-            total_students++;
+            totalStudents++;
         }
 
             public string GetStudentInfo()
@@ -86,12 +86,12 @@
 
             public int GetCount()
             {
-                return total_students;
+                return totalStudents;
             }
 
             public static string GetTotalStudentAmount()
             {
-                return $"{total_students} total students were initialized";
+                return $"{totalStudents} total students were initialized";
             }
 
             public string CompareGPA(Student otherStudent)
